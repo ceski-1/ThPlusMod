@@ -267,10 +267,18 @@ static function font GetScaledFont(canvas C, string FontFamily, int FontSize)
 
 static function int GetClosestFontSize(int FontSize, int FontSizeArray[16])
 {
-	local int Low, High, Mid;
+	local int i, Low, High, Mid;
+
+	for (i = 0; i < ArrayCount(FontSizeArray); i++)
+	{
+		if (FontSizeArray[i] > 0)
+		{
+			High++;
+		}
+	}
+	High--;
 
 	// binary search
-	High = ArrayCount(FontSizeArray) - 1;
 	while (High - Low > 1)
 	{
 		Mid = (High + Low) / 2;
