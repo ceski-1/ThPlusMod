@@ -19,7 +19,7 @@ var ThieveryPlayerReplicationInfo tppPRI;
 
 var float MyClipY;            // update fonts when screen size changes
 var font HotbarFont;          // font for weapon hotbar slots
-var font CleanFontNoAA;       // font for map names only. no anti-aliasing
+var font MapFont;             // font for map names only
 var font SmallChatFont;       // font for various say/chat messages
 var font SansFontTiny;        // font for loadout screen tooltips
 var color TrueSilverColor;    // default text color
@@ -91,6 +91,9 @@ var float HideCompassTime;    // timestamp when compass started being hidden
 var float CompassWidth;       // scaled compass width
 var float CompassHeight;      // scaled compass height
 var float LastShowMapTime;    // timestamp when player last checked map
+
+// valid font sizes
+var int SansFontSize[16], CleanFontSize[16], SerifFontSize[16];
 
 struct MeshInfo // mesh info for drawing various meshes
 {
@@ -183,42 +186,42 @@ static function string TrimText(canvas C, string Text, float TrimWidth, optional
 //=============================================================================
 // fonts
 //
-// hand-tuned under 720 res height, otherwise scaled to nearest even value from
-// 10 to 80, using original 1024x768 or 1280x960 appearance as reference
+// hand-tuned under 720 res height, otherwise scaled using original 1024x768 or
+// 1280x960 appearance as reference
 
 simulated function FindSomeFonts(canvas C)
 {
 	if (C.ClipY < 600) // 0 to 599
 	{
-		SansFontTiny    = GetFixedFont("ThClean", 10);
-		SansFontSmall   = GetFixedFont("ThClean", 12);
-		SansFontMedium  = GetFixedFont("ThClean", 12);
-		SansFontLarge   = GetFixedFont("ThSans", 16);
-		CleanFontNoAA   = Font'Engine.SmallFont';
+		SansFontTiny    = Font(DynamicLoadObject("LadderFonts.UTLadder10", class'Font'));
+		SansFontSmall   = Font(DynamicLoadObject("LadderFonts.UTLadder12", class'Font'));
+		SansFontMedium  = Font(DynamicLoadObject("LadderFonts.UTLadder12", class'Font'));
+		SansFontLarge   = Font(DynamicLoadObject("LadderFonts.UTLadder16", class'Font'));
+		MapFont         = Font'Engine.SmallFont';
 		CleanFontSmall  = Font'Engine.SmallFont';
-		CleanFontMedium = GetFixedFont("ThClean", 10);
-		MyFontSmall     = GetFixedFont("ThSerif", 14);
-		MyFontMedium    = GetFixedFont("ThSerif", 18);
-		MyFontLarge     = GetFixedFont("ThSerif", 20);
-		SmallChatFont   = GetFixedFont("ThClean", 12);
-		LargeChatFont   = GetFixedFont("ThClean", 16);
-		HotbarFont      = GetFixedFont("ThClean", 10);
+		CleanFontMedium = Font(DynamicLoadObject("LadderFonts.UTLadder10", class'Font'));
+		MyFontSmall     = Font(DynamicLoadObject("ThPlusFonts.ThSerif14", class'Font'));
+		MyFontMedium    = Font(DynamicLoadObject("ThPlusFonts.ThSerif18", class'Font'));
+		MyFontLarge     = Font(DynamicLoadObject("ThPlusFonts.ThSerif20", class'Font'));
+		SmallChatFont   = Font(DynamicLoadObject("LadderFonts.UTLadder12", class'Font'));
+		LargeChatFont   = Font(DynamicLoadObject("LadderFonts.UTLadder16", class'Font'));
+		HotbarFont      = Font(DynamicLoadObject("LadderFonts.UTLadder10", class'Font'));
 	}
 	else if (C.ClipY < 720) // 600 to 719
 	{
-		SansFontTiny    = GetFixedFont("ThSans", 12);
-		SansFontSmall   = GetFixedFont("ThClean", 12);
-		SansFontMedium  = GetFixedFont("ThSans", 14);
-		SansFontLarge   = GetFixedFont("ThSans", 20);
-		CleanFontNoAA   = GetFixedFont("ThNoAA", 12);
-		CleanFontSmall  = GetFixedFont("ThClean", 12);
-		CleanFontMedium = GetFixedFont("ThClean", 12);
-		MyFontSmall     = GetFixedFont("ThSerif", 14);
-		MyFontMedium    = GetFixedFont("ThSerif", 18);
-		MyFontLarge     = GetFixedFont("ThSerif", 20);
-		SmallChatFont   = GetFixedFont("ThClean", 14);
-		LargeChatFont   = GetFixedFont("ThClean", 20);
-		HotbarFont      = GetFixedFont("ThClean", 12);
+		SansFontTiny    = Font(DynamicLoadObject("LadderFonts.UTLadder12", class'Font'));
+		SansFontSmall   = Font(DynamicLoadObject("LadderFonts.UTLadder12", class'Font'));
+		SansFontMedium  = Font(DynamicLoadObject("LadderFonts.UTLadder14", class'Font'));
+		SansFontLarge   = Font(DynamicLoadObject("LadderFonts.UTLadder20", class'Font'));
+		MapFont         = Font(DynamicLoadObject("LadderFonts.UTLadder12", class'Font'));
+		CleanFontSmall  = Font(DynamicLoadObject("LadderFonts.UTLadder12", class'Font'));
+		CleanFontMedium = Font(DynamicLoadObject("LadderFonts.UTLadder12", class'Font'));
+		MyFontSmall     = Font(DynamicLoadObject("ThPlusFonts.ThSerif14", class'Font'));
+		MyFontMedium    = Font(DynamicLoadObject("ThPlusFonts.ThSerif18", class'Font'));
+		MyFontLarge     = Font(DynamicLoadObject("ThPlusFonts.ThSerif20", class'Font'));
+		SmallChatFont   = Font(DynamicLoadObject("LadderFonts.UTLadder14", class'Font'));
+		LargeChatFont   = Font(DynamicLoadObject("LadderFonts.UTLadder20", class'Font'));
+		HotbarFont      = Font(DynamicLoadObject("LadderFonts.UTLadder12", class'Font'));
 	}
 	else // 720 and up
 	{
@@ -226,7 +229,7 @@ simulated function FindSomeFonts(canvas C)
 		SansFontSmall   = GetScaledFont(C, "ThSans", 14);
 		SansFontMedium  = GetScaledFont(C, "ThSans", 16);
 		SansFontLarge   = GetScaledFont(C, "ThSans", 24);
-		CleanFontNoAA   = GetScaledFont(C, "ThNoAA", 11);
+		MapFont         = GetScaledFont(C, "UTLadder", 11);
 		CleanFontSmall  = GetScaledFont(C, "ThClean", 11);
 		CleanFontMedium = GetScaledFont(C, "ThClean", 12);
 		MyFontSmall     = GetScaledFont(C, "ThSerif", 16);
@@ -239,17 +242,69 @@ simulated function FindSomeFonts(canvas C)
 	LargeChatFontName = string(LargeChatFont);
 }
 
-static function font GetFixedFont(string FontFamily, int FontSize)
-{
-	return Font(DynamicLoadObject("ThPlusFonts."$FontFamily$FontSize, class'Font'));
-}
-
 static function font GetScaledFont(canvas C, string FontFamily, int FontSize)
 {
 	FontSize = float(FontSize) * C.ClipY / 768.0;
 	FontSize += FontSize % 2;
-	FontSize = Clamp(FontSize, 10, 80);
-	return GetFixedFont(FontFamily, FontSize);
+	if (FontFamily ~= "ThSans")
+	{
+		FontSize = GetClosestFontSize(FontSize, Default.SansFontSize);
+	}
+	else if (FontFamily ~= "ThClean")
+	{
+		FontSize = GetClosestFontSize(FontSize, Default.CleanFontSize);
+	}
+	else if (FontFamily ~= "ThSerif")
+	{
+		FontSize = GetClosestFontSize(FontSize, Default.SerifFontSize);
+	}
+	else // UTLadder
+	{
+		return GetLadderFont(FontSize);
+	}
+	return Font(DynamicLoadObject("ThPlusFonts."$FontFamily$FontSize, class'Font'));
+}
+
+static function int GetClosestFontSize(int FontSize, int FontSizeArray[16])
+{
+	local int Low, High, Mid;
+
+	// binary search
+	High = ArrayCount(FontSizeArray) - 1;
+	while (High - Low > 1)
+	{
+		Mid = (High + Low) / 2;
+		if (FontSizeArray[Mid] < FontSize)
+		{
+			Low = Mid;
+		}
+		else
+		{
+			High = Mid;
+		}
+	}
+
+	if (FontSize - FontSizeArray[Low] <= FontSizeArray[High] - FontSize)
+	{
+		return FontSizeArray[Low];
+	}
+	else
+	{
+		return FontSizeArray[High];
+	}
+}
+
+static function font GetLadderFont(int FontSize)
+{
+	if (FontSize < 27)
+	{
+		FontSize = Clamp(FontSize, 10, 24);
+	}
+	else
+	{
+		FontSize = 30;
+	}
+	return Font(DynamicLoadObject("LadderFonts.UTLadder"$FontSize, class'Font'));
 }
 
 //=============================================================================
@@ -1471,7 +1526,7 @@ simulated function DrawOnMap(canvas C, float PosX, float PosY, float TexSize,
 	C.DrawRect(Tex, TexSize * (0.8 * scaleY), TexSize * (0.8 * scaleY));
 	if (bDrawText)
 	{
-		C.Font = CleanFontNoAA;
+		C.Font = MapFont;
 		DrawNamePlate(C, PosX, PosY + TextOffset * (0.8 * scaleY), 0, 0, 0, Text);
 	}
 }
@@ -3288,4 +3343,42 @@ defaultproperties
 	TotalHotkeys(1)=6
 	LargeChatFontName="ThPlusFonts.ThClean22"
 	ServerInfoClass=class'ThPlusServerInfo'
+	SansFontSize(0)=12
+	SansFontSize(1)=14
+	SansFontSize(2)=16
+	SansFontSize(3)=18
+	SansFontSize(4)=20
+	SansFontSize(5)=22
+	SansFontSize(6)=24
+	SansFontSize(7)=30
+	SansFontSize(8)=36
+	SansFontSize(9)=42
+	SansFontSize(10)=48
+	SansFontSize(11)=64
+	CleanFontSize(0)=10
+	CleanFontSize(1)=12
+	CleanFontSize(2)=14
+	CleanFontSize(3)=16
+	CleanFontSize(4)=18
+	CleanFontSize(5)=20
+	CleanFontSize(6)=22
+	CleanFontSize(7)=24
+	CleanFontSize(8)=30
+	CleanFontSize(9)=36
+	CleanFontSize(10)=42
+	CleanFontSize(11)=48
+	CleanFontSize(12)=64
+	SerifFontSize(0)=12
+	SerifFontSize(1)=14
+	SerifFontSize(2)=16
+	SerifFontSize(3)=18
+	SerifFontSize(4)=20
+	SerifFontSize(5)=22
+	SerifFontSize(6)=24
+	SerifFontSize(7)=30
+	SerifFontSize(8)=36
+	SerifFontSize(9)=42
+	SerifFontSize(10)=48
+	SerifFontSize(11)=64
+	SerifFontSize(12)=80
 }

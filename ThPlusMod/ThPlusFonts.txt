@@ -2,7 +2,6 @@
 // copy this file to the System folder of a separate UT99 469b install, then
 // run the following command in the UnrealEd log window: exec ThPlusFonts.txt
 
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans10 FontName="Inter Light" Height=10 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans12 FontName="Inter Light" Height=12 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans14 FontName="Inter Light" Height=14 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans16 FontName="Inter Light" Height=16 AntiAlias=1 XPad=2 YPad=2
@@ -10,71 +9,11 @@ new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans18 FontName="Inter Ligh
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans20 FontName="Inter Light" Height=20 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans22 FontName="Inter Light" Height=22 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans24 FontName="Inter Light" Height=24 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans26 FontName="Inter Light" Height=26 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans28 FontName="Inter Light" Height=28 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans30 FontName="Inter Light" Height=30 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans32 FontName="Inter Light" Height=32 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans34 FontName="Inter Light" Height=34 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans36 FontName="Inter Light" Height=36 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans38 FontName="Inter Light" Height=38 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans40 FontName="Inter Light" Height=40 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans42 FontName="Inter Light" Height=42 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans44 FontName="Inter Light" Height=44 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans46 FontName="Inter Light" Height=46 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans48 FontName="Inter Light" Height=48 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans50 FontName="Inter Light" Height=50 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans52 FontName="Inter Light" Height=52 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans54 FontName="Inter Light" Height=54 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans56 FontName="Inter Light" Height=56 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans58 FontName="Inter Light" Height=58 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans60 FontName="Inter Light" Height=60 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans62 FontName="Inter Light" Height=62 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans64 FontName="Inter Light" Height=64 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans66 FontName="Inter Light" Height=66 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans68 FontName="Inter Light" Height=68 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans70 FontName="Inter Light" Height=70 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans72 FontName="Inter Light" Height=72 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans74 FontName="Inter Light" Height=74 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans76 FontName="Inter Light" Height=76 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans78 FontName="Inter Light" Height=78 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSans80 FontName="Inter Light" Height=80 AntiAlias=1 XPad=2 YPad=2
-
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA10 FontName="Arial" Height=10 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA12 FontName="Arial" Height=12 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA14 FontName="Arial" Height=14 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA16 FontName="Arial" Height=16 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA18 FontName="Arial" Height=18 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA20 FontName="Arial" Height=20 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA22 FontName="Arial" Height=22 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA24 FontName="Arial" Height=24 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA26 FontName="Arial" Height=26 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA28 FontName="Arial" Height=28 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA30 FontName="Arial" Height=30 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA32 FontName="Arial" Height=32 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA34 FontName="Arial" Height=34 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA36 FontName="Arial" Height=36 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA38 FontName="Arial" Height=38 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA40 FontName="Arial" Height=40 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA42 FontName="Arial" Height=42 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA44 FontName="Arial" Height=44 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA46 FontName="Arial" Height=46 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA48 FontName="Arial" Height=48 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA50 FontName="Arial" Height=50 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA52 FontName="Arial" Height=52 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA54 FontName="Arial" Height=54 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA56 FontName="Arial" Height=56 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA58 FontName="Arial" Height=58 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA60 FontName="Arial" Height=60 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA62 FontName="Arial" Height=62 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA64 FontName="Arial" Height=64 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA66 FontName="Arial" Height=66 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA68 FontName="Arial" Height=68 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA70 FontName="Arial" Height=70 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA72 FontName="Arial" Height=72 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA74 FontName="Arial" Height=74 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA76 FontName="Arial" Height=76 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA78 FontName="Arial" Height=78 AntiAlias=0 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThNoAA80 FontName="Arial" Height=80 AntiAlias=0 XPad=2 YPad=2
 
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean10 FontName="Arial" Height=10 AntiAlias=0 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean12 FontName="Arial" Height=12 AntiAlias=0 XPad=2 YPad=2
@@ -84,36 +23,12 @@ new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean18 FontName="Arial" He
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean20 FontName="Arial" Height=20 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean22 FontName="Arial" Height=22 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean24 FontName="Arial" Height=24 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean26 FontName="Arial" Height=26 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean28 FontName="Arial" Height=28 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean30 FontName="Arial" Height=30 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean32 FontName="Arial" Height=32 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean34 FontName="Arial" Height=34 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean36 FontName="Arial" Height=36 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean38 FontName="Arial" Height=38 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean40 FontName="Arial" Height=40 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean42 FontName="Arial" Height=42 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean44 FontName="Arial" Height=44 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean46 FontName="Arial" Height=46 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean48 FontName="Arial" Height=48 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean50 FontName="Arial" Height=50 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean52 FontName="Arial" Height=52 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean54 FontName="Arial" Height=54 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean56 FontName="Arial" Height=56 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean58 FontName="Arial" Height=58 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean60 FontName="Arial" Height=60 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean62 FontName="Arial" Height=62 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean64 FontName="Arial" Height=64 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean66 FontName="Arial" Height=66 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean68 FontName="Arial" Height=68 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean70 FontName="Arial" Height=70 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean72 FontName="Arial" Height=72 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean74 FontName="Arial" Height=74 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean76 FontName="Arial" Height=76 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean78 FontName="Arial" Height=78 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThClean80 FontName="Arial" Height=80 AntiAlias=1 XPad=2 YPad=2
 
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif10 FontName="Carleton" Height=10 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif12 FontName="Carleton" Height=12 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif14 FontName="Carleton" Height=14 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif16 FontName="Carleton" Height=16 AntiAlias=1 XPad=2 YPad=2
@@ -121,33 +36,11 @@ new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif18 FontName="Carleton"
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif20 FontName="Carleton" Height=20 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif22 FontName="Carleton" Height=22 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif24 FontName="Carleton" Height=24 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif26 FontName="Carleton" Height=26 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif28 FontName="Carleton" Height=28 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif30 FontName="Carleton" Height=30 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif32 FontName="Carleton" Height=32 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif34 FontName="Carleton" Height=34 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif36 FontName="Carleton" Height=36 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif38 FontName="Carleton" Height=38 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif40 FontName="Carleton" Height=40 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif42 FontName="Carleton" Height=42 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif44 FontName="Carleton" Height=44 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif46 FontName="Carleton" Height=46 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif48 FontName="Carleton" Height=48 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif50 FontName="Carleton" Height=50 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif52 FontName="Carleton" Height=52 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif54 FontName="Carleton" Height=54 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif56 FontName="Carleton" Height=56 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif58 FontName="Carleton" Height=58 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif60 FontName="Carleton" Height=60 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif62 FontName="Carleton" Height=62 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif64 FontName="Carleton" Height=64 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif66 FontName="Carleton" Height=66 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif68 FontName="Carleton" Height=68 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif70 FontName="Carleton" Height=70 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif72 FontName="Carleton" Height=72 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif74 FontName="Carleton" Height=74 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif76 FontName="Carleton" Height=76 AntiAlias=1 XPad=2 YPad=2
-new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif78 FontName="Carleton" Height=78 AntiAlias=1 XPad=2 YPad=2
 new TrueTypeFontFactory PACKAGE="ThPlusFonts" Name=ThSerif80 FontName="Carleton" Height=80 AntiAlias=1 XPad=2 YPad=2
 
 OBJ SAVEPACKAGE PACKAGE="ThPlusFonts" FILE="ThPlusFonts.u"

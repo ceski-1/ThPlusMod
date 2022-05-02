@@ -193,8 +193,9 @@ static function font GetFont(float NewWinHeight, optional float TextScale)
 	}
 	else
 	{
-		FontSize = Clamp(int(TextHeight) + int(TextHeight) % 2, 12, 80);
-		return class'ThPlusHUD'.static.GetFixedFont("ThSerif", FontSize);
+		FontSize = int(TextHeight) + int(TextHeight) % 2;
+		FontSize = class'ThPlusHUD'.static.GetClosestFontSize(FontSize, class'ThPlusHUD'.Default.SerifFontSize);
+		return Font(DynamicLoadObject("ThPlusFonts.ThSerif"$FontSize, class'Font'));
 	}
 }
 
