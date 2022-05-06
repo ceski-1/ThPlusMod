@@ -44,7 +44,7 @@ replication
 	unreliable if (bNetOwner && Role == ROLE_Authority)
 		ClientPlayASound;
 	reliable if (Role < ROLE_Authority)
-		ServerUpdateFOV, ServerClearOrderingBot;
+		ServerUpdateFOV, ServerClearOrderingBot, ServerReleaseHook;
 }
 
 //=============================================================================
@@ -567,8 +567,9 @@ simulated function ClientDefaultFOV()
 
 //=============================================================================
 // 1. more fov literals replaced with variables
-// 2. rat/specator hud modified to scale correctly
+// 2. rat/spectator hud modified to scale correctly
 // 3. fps independent crouching
+// 4. player no longer gets stuck when releasing hook
 
 state FreeCam
 {
@@ -642,10 +643,13 @@ state PlayerWalking
 		if (CurrentGrapplingHook != None)
 		{
 			Super.TProcessMove(DeltaTime, NewAccel, DodgeMove, DeltaRot, VelCap, WinchHeight);
+			if (Role < ROLE_Authority && CurrentGrapplingHook == None)
+			{
+				ServerReleaseHook(); // client released hook, so update server
+			}
 			return;
 		}
 
-		// same as parent
 		ropeFixPos = 0.0;
 		GroundSpeed = Default.GroundSpeed * (MSpeed / 100.0) * (VelCap / 100.0);
 		AirSpeed = Default.AirSpeed * (MSpeed / 100.0);
@@ -775,6 +779,14 @@ state PlayerWalking
 		}
 		CheckFallingOffLadder();
 		OldVelocity = Velocity;
+	}
+}
+
+function ServerReleaseHook()
+{
+	if (CurrentGrapplingHook != None)
+	{
+		CurrentGrapplingHook.ReleaseHook();
 	}
 }
 
