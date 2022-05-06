@@ -817,6 +817,12 @@ function TServerMove(float TimeStamp, vector InAccel, vector ClientLoc,
 	local float OldUpdateTime, ClientErr, DeltaTime;
 	local vector LocDiff;
 
+	// discard outdated move
+	if (CurrentTimeStamp >= TimeStamp)
+	{
+		return;
+	}
+
 	if (!bLimitClientAdjust)
 	{
 		Super.TServerMove(TimeStamp, InAccel, ClientLoc, PackedBits, DodgeMove,
