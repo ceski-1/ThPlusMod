@@ -34,12 +34,6 @@ simulated event Actor SpawnNotification(Actor A)
 			return ReplaceActor(A, class'ThPlusWeaponCrossbow');
 		case class'ThProjectileScoutingOrbD':
 			return ReplaceActor(A, class'ThPlusProjectileScoutingOrb');
-		case class'ThEndgameSequence':
-			return ReplaceActor(A, class'ThPlusEndgame');
-		case class'ThEndgameSequenceGuards':
-			return ReplaceActor(A, class'ThPlusEndgameGuards');
-		case class'ThEndgameSequenceThiefMatch':
-			return ReplaceActor(A, class'ThPlusEndgameThiefMatch');
 		default:
 			return A;
 	}

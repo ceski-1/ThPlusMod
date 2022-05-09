@@ -948,9 +948,36 @@ simulated function DrawHUD(canvas C)
 	}
 	TrackHUDChanges();
 	UpdateHUDAutoHide(C);
+	UpdateEndgame();
 	C.Reset();
 	Super.DrawHUD(C);
 	DrawWeaponIcon(C);
+}
+
+simulated function UpdateEndgame()
+{
+	if (tpp.GetStateName() == 'GameEnded' && tpp.EndGameController == None
+		&& tppGRI.ThiefEndgameSequenceClass != None && tppGRI.GuardEndgameSequenceClass != None)
+	{
+		if (tpp.WinningTeam == 0)
+		{
+			if (tppGRI.ThiefEndgameSequenceClass == class'ThEndgameSequence')
+			{
+				tpp.EndGameController = Spawn(class'ThPlusEndgame', tpp);
+			}
+			else if (tppGRI.ThiefEndgameSequenceClass == class'ThEndgameSequenceThiefMatch')
+			{
+				tpp.EndGameController = Spawn(class'ThPlusEndgameThiefMatch', tpp);
+			}
+		}
+		else if (tpp.WinningTeam == 1)
+		{
+			if (tppGRI.GuardEndgameSequenceClass == class'ThEndgameSequenceGuards')
+			{
+				tpp.EndGameController = Spawn(class'ThPlusEndgameGuards', tpp);
+			}
+		}
+	}
 }
 
 //=============================================================================
