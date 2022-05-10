@@ -27,7 +27,6 @@ Extract the archive to your `UnrealTournament` directory.
   ```
   ucc server TH-Flats.unr?game=ThieveryMod.ThieveryDeathMatchPlus?mutator=ThPlusMod.ThPlusMutator INI=ThAux.ini LOG=ThieveryDedicatedServer.log USERINI=ThieveryUser.ini -lanplay
   ```
-Adjust VSync and framerate limit as needed using your video card's control panel or MSI Afterburner (RTSS). Avoid changing these settings in the game itself.
 
 ## Client Settings
 Client settings can be changed in-game (**Menu Bar > Mod > ThPlusMod Config**). These settings are also under `[ThPlusMod.ThPlusConfig]` in `ThieveryMod.ini`.
