@@ -16,6 +16,7 @@ function ModifyLogin(out class<PlayerPawn> SpawnClass, out string Portal, out st
 function ModifyPlayer(Pawn Other)
 {
 	local ThPlusPawn tpp;
+	local int MinNetSpeed, MaxNetSpeed;
 
 	Super.ModifyPlayer(Other);
 	tpp = ThPlusPawn(Other);
@@ -26,6 +27,14 @@ function ModifyPlayer(Pawn Other)
 		tpp.bAllowRaiseBehindView = class'ThPlusConfigServer'.Default.bAllowRaiseBehindView;
 		tpp.bReplayPendingMove = class'ThPlusConfigServer'.Default.bReplayPendingMove;
 		tpp.bLimitClientAdjust = class'ThPlusConfigServer'.Default.bLimitClientAdjust;
+		MinNetSpeed = Max(500, class'ThPlusConfigServer'.Default.MinNetSpeed);
+		MaxNetSpeed = Max(0, class'ThPlusConfigServer'.Default.MaxNetSpeed);
+		if (MaxNetSpeed > 0)
+		{
+			MaxNetSpeed = Max(MinNetSpeed, MaxNetSpeed);
+		}
+		tpp.MinNetSpeed = MinNetSpeed;
+		tpp.MaxNetSpeed = MaxNetSpeed;
 	}
 }
 

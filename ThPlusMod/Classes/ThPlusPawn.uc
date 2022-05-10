@@ -33,6 +33,8 @@ var bool bAllowViewBob;          // allow player to adjust view bob
 var bool bAllowRaiseBehindView;  // allow player to raise behind view height
 var bool bReplayPendingMove;     // replay the pending move after saved moves
 var bool bLimitClientAdjust;     // limit the frequency of client adjustments
+var int MinNetSpeed;             // min client netspeed
+var int MaxNetSpeed;             // max client netspeed (max framerate = netspeed / 64)
 
 //=============================================================================
 
@@ -40,7 +42,8 @@ replication
 {
 	reliable if (bNetOwner && Role == ROLE_Authority)
 		bAllowFOVCorrection, bAllowViewBob, bAllowRaiseBehindView,
-		bReplayPendingMove, bLimitClientAdjust, ClientRatFOV, ClientDefaultFOV;
+		bReplayPendingMove, bLimitClientAdjust, MinNetSpeed, MaxNetSpeed,
+		ClientRatFOV, ClientDefaultFOV;
 	unreliable if (bNetOwner && Role == ROLE_Authority)
 		ClientPlayASound;
 	reliable if (Role < ROLE_Authority)
@@ -160,11 +163,24 @@ simulated function RenderSensingEffect(canvas C)
 }
 
 //=============================================================================
-// fov correction
+// fov correction and netspeed limiting
+
+function LimitNetSpeed()
+{
+	if (MinNetSpeed > 0 && Player.CurrentNetSpeed < MinNetSpeed)
+	{
+		ConsoleCommand("netspeed "$MinNetSpeed);
+	}
+	else if (MaxNetSpeed > 0 && Player.CurrentNetSpeed > MaxNetSpeed)
+	{
+		ConsoleCommand("netspeed "$MaxNetSpeed);
+	}
+}
 
 event PreRender(canvas C)
 {
 	Super.PreRender(C);
+	LimitNetSpeed();
 
 	if (bAllowFOVCorrection)
 	{
