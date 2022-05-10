@@ -86,10 +86,10 @@ Smoother client movement by replaying the pending move after saved moves (experi
 `bLimitClientAdjust=True`  
 Smoother client movement by limiting the frequency of client adjustments (experimental).
 
-`MinNetSpeed=2600`
+`MinNetSpeed=2600`  
 Minimum client netspeed.
 
-`MaxNetSpeed=10000`
+`MaxNetSpeed=10000`  
 Maximum client netspeed. Maximum client framerate is `MaxNetSpeed / 64`.
 
 ## Compiling
