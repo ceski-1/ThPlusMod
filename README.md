@@ -1,6 +1,10 @@
 # ThPlusMod
 A collection of quality of life improvements for Thievery UT.
 
+## Download
+
+[ThPlusMod-v1.0.3.7z](https://github.com/ceski-1/ThPlusMod/releases/download/v1.0.3/ThPlusMod-v1.0.3.7z)
+
 ## Features
 * FOV correction for widescreen resolutions
 * Basic high resolution font support
@@ -19,7 +23,7 @@ A collection of quality of life improvements for Thievery UT.
 * [Enhanced OpenGL Renderer v3.7](https://www.cwdohnal.com/utglr/#Installation%20instructions) (Recommended) or [Enhanced Direct3D9 Renderer v1.3](https://www.cwdohnal.com/utglr/)
 
 ## Installation
-Extract the archive to your `UnrealTournament` directory.
+Extract [ThPlusMod-v1.0.3.7z](https://github.com/ceski-1/ThPlusMod/releases/download/v1.0.3/ThPlusMod-v1.0.3.7z) to your `UnrealTournament` directory.
 
 ## Usage
 * **Clients**: Launch the game with `Thievery.exe` to play.
